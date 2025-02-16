@@ -30,3 +30,20 @@ const calculateServiceFee = (amount, serviceType) => { // Created an arrow funct
 
 calculateServiceFee(200, "Premium"); // Calculates the service fee of a $200 amount with Premium service
 calculateServiceFee(500, "Standard"); // Calculates the service fee of a $500 amount with Standard service
+
+// Task 4 - Car Rental Cost Calculation
+
+function calculateRentalCost(days, carType, insurance = false) { // Created a function to calculate rental cost based on the number of days, the car type, and if they have insurance
+    let rentalcost = 0
+    if (carType === "Economy") rentalcost = 40 // If the car type is economy it will cost $40 a day
+    else if (carType === "Standard") rentalcost= 60 // If the car type is standard it will cost $60 a day
+    else if (carType === "Luxury") rentalcost = 100 // If the car type is luxury it will cost $100 a day
+
+    if (insurance === true) insuranceCost =+ 20
+    else insuranceCost =+ 0 // Add on $20 a day for insurance
+    console.log(`Total Rental Cost $${((rentalcost + insuranceCost) * days).toFixed(2)}`);
+// logs the rental cost by adding the rental and insurance cost and multiplying by the number of days
+}
+
+calculateRentalCost(3, "Economy", true); // Calculates the rental cost for a three day rental of an Economy car with insurance
+calculateRentalCost(5, "Luxury", false); // Calculates the rental cost for a five day rental of a Luxury car without insurance
