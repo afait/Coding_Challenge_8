@@ -47,3 +47,13 @@ function calculateRentalCost(days, carType, insurance = false) { // Created a fu
 
 calculateRentalCost(3, "Economy", true); // Calculates the rental cost for a three day rental of an Economy car with insurance
 calculateRentalCost(5, "Luxury", false); // Calculates the rental cost for a five day rental of a Luxury car without insurance
+
+// Task 5 - Loan Payment Calculation
+
+function calculateLoanPayment(principal, rate, time) { // Declare a function that calculates loan payment using principal, rate, and time
+    let TotalPayment = (principal +(principal * rate * time));
+    console.log(`Total Payment: $${TotalPayment.toFixed(2)}`)
+}; // Multiplies the three variables to get a TotalPayment amount
+
+calculateLoanPayment(1000, 0.05, 2); // Calculates the total payment for a loan with a principal of $1000 a 5% rate and time of 2
+calculateLoanPayment(5000, 0.07, 3); // Calculates the total payment for a loan with a principal of $5000 a 7% rate and time of 3
