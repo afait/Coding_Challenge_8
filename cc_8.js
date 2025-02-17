@@ -79,3 +79,15 @@ function createCartTracker() {
 let cart = createCartTracker();
 console.log(cart(20)); // Calculates the cart total when adding $20
 console.log(cart(35)); // Calculates the cart total when adding another $35
+
+// Task 8 - Savings Growth Projection
+
+function calculateSavings(years, growth) { // Created a function that calculates savings based on year and growth
+    if (years === 10) // Function stops compounding growth once the year reaches 10
+        return (`Projected Savings: $${growth.toFixed(2)}`); // Calculates projected savings growth to two decimal places
+
+    return calculateSavings(years + 1, growth * 1.05); // Calculates the savings by adding 5% per year
+};
+
+console.log(calculateSavings(8, 1000)); // Calculates the savings for 8 years with growth of 1000
+console.log(calculateSavings(5, 5000)); // Calculates the savings for 5 years with growth of 5000
