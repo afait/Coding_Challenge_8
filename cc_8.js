@@ -57,3 +57,11 @@ function calculateLoanPayment(principal, rate, time) { // Declare a function tha
 
 calculateLoanPayment(1000, 0.05, 2); // Calculates the total payment for a loan with a principal of $1000 a 5% rate and time of 2
 calculateLoanPayment(5000, 0.07, 3); // Calculates the total payment for a loan with a principal of $5000 a 7% rate and time of 3
+
+// Task 6 - Identifying Large Transactions
+
+const transactions = [200, 1500, 3200, 800, 2500]; // Created an array of 5 transactions
+function filterLargeTransactions(transactions, filterFunction) {
+    return transactions.filter(filterFunction);
+}; // Created a filter which will evaluate each transaction and see if it fulfills the filter requirements
+console.log(filterLargeTransactions(transactions, amount => amount > 1000)); // Filters out and returns any transaction that is greater than 1000
